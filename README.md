@@ -5,7 +5,7 @@ The Concise Binary Object Representation (CBOR) is a data format whose design go
 Read more in the [documentation on ReadTheDocs](http://cbor.io/). 
 
 # Examples
-## encode integer 
+## decode integer 
 ```java
     String input = "1b000000e8d4a51000";
     byte[] bytes = fromHex(input);
@@ -14,7 +14,7 @@ Read more in the [documentation on ReadTheDocs](http://cbor.io/).
     assertTrue(result.val instanceof Long);
     assertEquals(1000000000000L, result.val);
 ```
-## encode bytes 
+## decode bytes 
 ```java
     String input = "5818010203040102030401020304010203040102030401020304";
     byte[] bytes = fromHex(input);
@@ -27,7 +27,7 @@ Read more in the [documentation on ReadTheDocs](http://cbor.io/).
         assertEquals(checkBytes[i], resultBytes[i]);
     }
 ```
-## encode array 
+## decode array 
 ```java
     String input = "83010203";
     byte[] bytes = fromHex(input);
